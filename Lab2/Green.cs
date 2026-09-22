@@ -11,7 +11,10 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            for (int i = 2; i <= n; i += 2)
+            {
+                answer += (double)i / (i + 1);
+            }
             // end
 
             return answer;
@@ -21,7 +24,12 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double p = 1;
+            for (int i = 0; i <= n; i++)
+            {
+                answer += p;
+                p /= x;
+            }
             // end
 
             return answer;
@@ -31,7 +39,15 @@ namespace Lab2
             long answer = 0;
 
             // code here
-
+            long f = 1;
+            for (int i = 0; i <= n; i++)
+            {
+                if (i > 0)
+                {
+                    f *= i;
+                }
+                answer += f;
+            }
             // end
 
             return answer;
@@ -41,7 +57,18 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            int n = 1;
+            double p = x;
+            double t;
+            while (true)
+            {
+                t = Math.Sin(n * p);
+                if (Math.Abs(t) < E)
+                    break;
+                answer += t;
+                n++;
+                p *= x;
+            }
             // end
 
             return answer;
